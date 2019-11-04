@@ -9,6 +9,9 @@
                 &emsp;&emsp;&emsp;min_idx = i\
     &emsp;Swap A[j] with A[min_idx]\
 
+### Best-case and Worst-case running times
+Running time for both cases is the same <b>theta(n*n) (quadratic)</b>.
+
 ### Loop Invariants
 #### Initialization:
 The loop invariants holds before the first loop iteration, when j = 1, because the subarray A[1 .. j - 1] is empty and therefore already sorted.
