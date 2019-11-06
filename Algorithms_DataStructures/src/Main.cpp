@@ -1,11 +1,15 @@
 #include <iostream>
-#include "Sorting/Selection_Sort/Selection_Sort.h"
+//#include "Sorting/Selection_Sort/Selection_Sort.h"
+#include "Sorting/Merge_Sort/Merge_Sort.h"
+
 int main()
 {
-	int A[5] = { 2,5,1,3,4 };
-	c_Algorithms_DS::SelectionSort(A, 5);
+	const unsigned int len = 3;
+	int A[len] = { 2,5, 3 };
+	c_Algorithms_DS::MergeSort(A, len);
 
-	for (int i = 0; i < 5; i++) {
+	for (int i = 0; i < len; i++) {
 		std::cout << A[i] << std::endl;
 	}
+	return 0;
 }
