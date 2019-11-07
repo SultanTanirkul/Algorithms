@@ -4,8 +4,8 @@
 
 int main()
 {
-	const unsigned int len = 3;
-	int A[len] = { 2,5, 3 };
+	const unsigned int len = 5;
+	int A[len] = { 5,4,3,2,1 };
 	c_Algorithms_DS::MergeSort(A, len);
 
 	for (int i = 0; i < len; i++) {

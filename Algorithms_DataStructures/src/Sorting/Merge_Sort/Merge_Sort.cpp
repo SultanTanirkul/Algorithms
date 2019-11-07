@@ -1,44 +1,71 @@
 #include "Merge_Sort.h"
-#include "iostream"
-#include "array"
+
 void c_Algorithms_DS::MergeSort(int* A, int len)
 {
-	std::array<int, 10> hello = { 1,2,3,4,5 };
-	int begin = 0, mid = len/2, end = len;
+	int p = 0,
+		r = len - 1,
+		q = r/2;
 
-	MergeSort(A, begin, mid, ceil(len/2));
-	MergeSort(A, mid + 1, end, len/2);
-	Merge(A, begin, mid, end, len);
+	MergeSort(A, p, q);
+	MergeSort(A, q + 1, r);
+	Merge(A, p, q, r);
 }
 
-void c_Algorithms_DS::MergeSort(int * A, int p, int q, int len)
+void c_Algorithms_DS::MergeSort(int * A, int p, int q)
 {
-	int begin = p, mid = q / 2, end = q;
-	if (len < 2) {
-		return;
-	}
-	else {
-		MergeSort(A, begin, mid, ceil(len/2));
-		MergeSort(A, mid + 1, end, len/2);
-		Merge(A, begin, mid, end, len);
-	}
-}
-
-void c_Algorithms_DS::Merge(int * A, int p, int q, int r, int len)
-{
-	for (int i = 0; i < len/2; i++) 
+	if (p > q)
 	{
-		if (A[i] < A[p + i]) 
-		{
-			swap1((int*)A[i], (int*)A[p+1]);
-		}
+		MergeSort(A, p, (p + q)/2);
+		MergeSort(A, (p + q) / 2 + 1, q);
+		Merge(A, p, (p + q) / 2, q);
 	}
 }
 
-// Utility Function for swapping the two elements
-void c_Algorithms_DS::swap1(int* a, int* b)
+void c_Algorithms_DS::Merge(int* A, int p, int q, int r)
 {
-	int temp = *a;
-	*a = *b;
-	*b = temp;
+	int i = 0, 
+		j = 0, 
+		k = p;
+	int n1 = q - p + 1;
+	int n2 = r - q + 1;
+
+	int* L = new int[n1];
+	int* R = new int[n2];
+
+	for (int m = 0; m < n1; m++)
+	{
+		L[m] = A[p + m + 1];
+	}
+
+	for (int m = 0; m < n2; m++)
+	{
+		R[m] = A[p + m];
+	}
+
+	while (i < n1 && j < n2)
+	{
+		if (L[i] > R[j]) {
+			A[k] = R[j];
+			j++;
+		}
+		else
+		{
+			A[k] = L[i];
+			i++;
+		}
+		k++;
+	}
+
+	while (i < n1)
+	{
+		A[k++] = L[i++];
+	}
+
+	while (j < n2)
+	{
+		A[k++] = L[j++];
+	}
+
+	delete[] L;
+	delete[] R;
 }
