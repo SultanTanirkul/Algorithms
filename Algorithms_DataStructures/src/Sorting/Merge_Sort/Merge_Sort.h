@@ -1,4 +1,6 @@
 #pragma once
+#include <limits>
+
 namespace c_Algorithms_DS {
 	void MergeSort(int* A, int len);
 

@@ -1,71 +1,63 @@
 #include "Merge_Sort.h"
+#include <limits>
 
 void c_Algorithms_DS::MergeSort(int* A, int len)
 {
-	int p = 0,
-		r = len - 1,
-		q = r/2;
-
-	MergeSort(A, p, q);
-	MergeSort(A, q + 1, r);
-	Merge(A, p, q, r);
+	MergeSort(A, 0, len - 1);
 }
 
-void c_Algorithms_DS::MergeSort(int * A, int p, int q)
+void c_Algorithms_DS::MergeSort(int * A, int p, int r)
 {
-	if (p > q)
+	if (p < r)
 	{
-		MergeSort(A, p, (p + q)/2);
-		MergeSort(A, (p + q) / 2 + 1, q);
-		Merge(A, p, (p + q) / 2, q);
+		int q = (p + r) / 2;
+		MergeSort(A, p, q);
+		MergeSort(A, q + 1, r);
+		Merge(A, p, q, r);
 	}
 }
 
 void c_Algorithms_DS::Merge(int* A, int p, int q, int r)
 {
-	int i = 0, 
-		j = 0, 
-		k = p;
+	// Determine max size of Left and Right array
 	int n1 = q - p + 1;
-	int n2 = r - q + 1;
+	int n2 = r - q;
 
-	int* L = new int[n1];
-	int* R = new int[n2];
+	// Create Left and Right Array
+	int* L = new int[n1 + 1];
+	int* R = new int[n2 + 1];
 
-	for (int m = 0; m < n1; m++)
+	// Fill the Left with numbers from main Array
+	for (int i = 0; i < n1; i++)
 	{
-		L[m] = A[p + m + 1];
+		L[i] = A[p + i];
 	}
 
-	for (int m = 0; m < n2; m++)
+	// Fill the Right with numbers from main Array
+	for (int j = 0; j < n2; j++)
 	{
-		R[m] = A[p + m];
+		R[j] = A[(q + 1) + j];
 	}
+	// Define the element of the last index to be the highest possible
+	L[n1] = INT_MAX;
+	R[n2] = INT_MAX;
 
-	while (i < n1 && j < n2)
+	int i = 0;
+	int j = 0;
+
+	for (int k = p; k < r + 1; k++)
 	{
-		if (L[i] > R[j]) {
-			A[k] = R[j];
-			j++;
+		// L1 or L2 will always be greater that complement because INT_MAX is highest number
+		if (L[i] < R[j]) {
+			A[k] = L[i++];
 		}
 		else
 		{
-			A[k] = L[i];
-			i++;
+			A[k] = R[j++];
 		}
-		k++;
 	}
 
-	while (i < n1)
-	{
-		A[k++] = L[i++];
-	}
-
-	while (j < n2)
-	{
-		A[k++] = L[j++];
-	}
-
+	// Delete heap allocated memory.
 	delete[] L;
 	delete[] R;
 }

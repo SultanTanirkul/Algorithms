@@ -15,11 +15,3 @@ void c_Algorithms_DS::SelectionSort(int* A, int len)
 		swap(&A[min_idx], &A[i]);
 	}
 }
-
-// Utility Function for swapping the two elements
-void c_Algorithms_DS::swap(int* a, int* b)
-{
-	int temp = *a;
-	*a = *b;
-	*b = temp;
-}

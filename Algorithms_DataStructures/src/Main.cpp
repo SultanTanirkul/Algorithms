@@ -4,12 +4,13 @@
 
 int main()
 {
-	const unsigned int len = 5;
-	int A[len] = { 5,4,3,2,1 };
+	const unsigned int len = 6;
+	int A[len] = {2,5,4,3,5,2 };
 	c_Algorithms_DS::MergeSort(A, len);
 
 	for (int i = 0; i < len; i++) {
 		std::cout << A[i] << std::endl;
 	}
+	std::cin.get();
 	return 0;
 }
