@@ -1,5 +1,4 @@
 #include "Merge_Sort.h"
-#include <limits>
 
 void c_Algorithms_DS::MergeSort(int* A, int len)
 {
@@ -42,19 +41,10 @@ void c_Algorithms_DS::Merge(int* A, int p, int q, int r)
 	L[n1] = INT_MAX;
 	R[n2] = INT_MAX;
 
-	int i = 0;
-	int j = 0;
-
-	for (int k = p; k < r + 1; k++)
+	for (int k = p, i = 0, j = 0; k < r + 1; k++)
 	{
 		// L1 or L2 will always be greater that complement because INT_MAX is highest number
-		if (L[i] < R[j]) {
-			A[k] = L[i++];
-		}
-		else
-		{
-			A[k] = R[j++];
-		}
+		A[k] = L[i] < R[j] ? L[i++] : R[j++];
 	}
 
 	// Delete heap allocated memory.

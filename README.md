@@ -4,5 +4,6 @@ This repository was created in order to learn, as well as implement some of the 
 
 ## Currently Implemented Algorithms
 Selection Sort
+Merge Sort
 
 ## Currently Implemented Data Stuctures
