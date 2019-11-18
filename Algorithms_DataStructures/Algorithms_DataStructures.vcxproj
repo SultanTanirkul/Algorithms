@@ -125,11 +125,13 @@
   <ItemGroup>
     <ClCompile Include="src\Main.cpp" />
     <ClCompile Include="src\Sorting\Merge_Sort\Merge_Sort.cpp" />
+    <ClCompile Include="src\Sorting\Merge_Sort\Merge_Sort_No_Sentinels.cpp" />
     <ClCompile Include="src\Sorting\Selection_Sort\Selection_Sort.cpp" />
     <ClCompile Include="src\Utils.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Sorting\Merge_Sort\Merge_Sort.h" />
+    <ClInclude Include="src\Sorting\Merge_Sort\Merge_Sort_No_Sentinels.h" />
     <ClInclude Include="src\Sorting\Selection_Sort\Selection_Sort.h" />
     <ClInclude Include="src\Utils.h" />
   </ItemGroup>

@@ -1,0 +1,6 @@
+# Visual Studio
+.vs/
+.git/
+
+# Project Specific
+x64/
