@@ -30,6 +30,12 @@
     <ClCompile Include="src\Sorting\Merge_Sort\Merge_Sort_No_Sentinels.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\Sorting\Insertion_Sort\InsertionSort.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Sorting\Insertion_Sort\RInsertionSort.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Sorting\Selection_Sort\Selection_Sort.h">
@@ -42,6 +48,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\Sorting\Merge_Sort\Merge_Sort_No_Sentinels.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Sorting\Insertion_Sort\InsertionSort.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Sorting\Insertion_Sort\RInsertionSort.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
