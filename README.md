@@ -6,6 +6,8 @@ This repository was created in order to learn, as well as implement some of the 
 
 * Selection Sort
 * Merge Sort Both Versions
-* Insertion Sort recursive && iterative
+* Insertion Sort Recursive && Iterative
+* Binary Search Iterative
+* Linear Search Iterative
 
 ## Currently Implemented Data Stuctures
