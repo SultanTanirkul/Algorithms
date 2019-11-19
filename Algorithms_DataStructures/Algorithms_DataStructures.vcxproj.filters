@@ -36,6 +36,12 @@
     <ClCompile Include="src\Sorting\Insertion_Sort\RInsertionSort.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\Searching\BinarySearch\BinarySearch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Searching\LinearSearch\LinearSearch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Sorting\Selection_Sort\Selection_Sort.h">
@@ -54,6 +60,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\Sorting\Insertion_Sort\RInsertionSort.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Searching\BinarySearch\BinarySearch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Searching\LinearSearch\LinearSearch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

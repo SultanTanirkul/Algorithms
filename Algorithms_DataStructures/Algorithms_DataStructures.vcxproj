@@ -124,6 +124,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\Main.cpp" />
+    <ClCompile Include="src\Searching\BinarySearch\BinarySearch.cpp" />
+    <ClCompile Include="src\Searching\LinearSearch\LinearSearch.cpp" />
     <ClCompile Include="src\Sorting\Insertion_Sort\InsertionSort.cpp" />
     <ClCompile Include="src\Sorting\Insertion_Sort\RInsertionSort.cpp" />
     <ClCompile Include="src\Sorting\Merge_Sort\Merge_Sort.cpp" />
@@ -132,6 +134,8 @@
     <ClCompile Include="src\Utils.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Searching\BinarySearch\BinarySearch.h" />
+    <ClInclude Include="src\Searching\LinearSearch\LinearSearch.h" />
     <ClInclude Include="src\Sorting\Insertion_Sort\InsertionSort.h" />
     <ClInclude Include="src\Sorting\Insertion_Sort\RInsertionSort.h" />
     <ClInclude Include="src\Sorting\Merge_Sort\Merge_Sort.h" />

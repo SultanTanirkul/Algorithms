@@ -5,6 +5,8 @@
 #include "sorting/merge_sort/merge_sort_no_sentinels.h"
 #include "sorting/insertion_sort/insertionsort.h"
 #include "sorting/Insertion_Sort/RInsertionSort.h"
+#include "Searching/BinarySearch/BinarySearch.h"
+#include "Searching/LinearSearch/LinearSearch.h"
 
 #include "Utils.h"
 
@@ -38,14 +40,11 @@ int main()
 				   91, 92, 93, 94, 95, 96, 97, 98, 99, 100 
 	             };
 
-	c_Algorithms_DS::RecursiveInsertionSort(A, len);
+	int testA[16]{ 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16 };
 
-	std::cout << c_Algorithms_DS::checkIfEquals(A, B, len) << std::endl;
+	int exists = c_Algorithms_DS::LinearSearch(B, 100, 99);
 
-	for (int i = 0; i < len; i++)
-	{
-		std::cout << A[i] << std::endl;
-	}
+	std::cout << exists << std::endl;
 
 	return 0;
 }
