@@ -8,6 +8,9 @@
 #include "Searching/BinarySearch/BinarySearch.h"
 #include "Searching/LinearSearch/LinearSearch.h"
 
+// Exercises
+#include "Exercises/2.3-7.h"
+
 #include "Utils.h"
 
 int main()
@@ -42,7 +45,7 @@ int main()
 
 	int testA[16]{ 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16 };
 
-	int exists = c_Algorithms_DS::LinearSearch(B, 100, 99);
+	bool exists = c_Algorithms_DS::sumExists(A, len, 51);
 
 	std::cout << exists << std::endl;
 
