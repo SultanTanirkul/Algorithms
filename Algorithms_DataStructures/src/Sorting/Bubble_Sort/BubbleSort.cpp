@@ -1,6 +1,6 @@
 #include "BubbleSort.h"
 
-#include "iostream"
+#include "../../Utils.h"
 
 void c_Algorithms_DS::BubbleSort(int * A, int len)
 {
@@ -10,11 +10,9 @@ void c_Algorithms_DS::BubbleSort(int * A, int len)
         //A ripple
         for(int j = len - 1; j > i; --j)
         {
-            // swap continuesly
+            // swap continuously
             if(A[j] < A[j - 1]){
-                min = A[j - 1];
-                A[j - 1] = A[j];
-                A[j] = min;
+				swap(&A[j], &A[j - 1]);
             }
         }
     }

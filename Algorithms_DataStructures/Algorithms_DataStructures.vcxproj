@@ -127,6 +127,7 @@
     <ClCompile Include="src\Main.cpp" />
     <ClCompile Include="src\Searching\BinarySearch\BinarySearch.cpp" />
     <ClCompile Include="src\Searching\LinearSearch\LinearSearch.cpp" />
+    <ClCompile Include="src\Sorting\Bubble_Sort\BubbleSort.cpp" />
     <ClCompile Include="src\Sorting\Insertion_Sort\InsertionSort.cpp" />
     <ClCompile Include="src\Sorting\Insertion_Sort\RInsertionSort.cpp" />
     <ClCompile Include="src\Sorting\Merge_Sort\Merge_Sort.cpp" />
@@ -138,6 +139,7 @@
     <ClInclude Include="src\Exercises\2.3-7.h" />
     <ClInclude Include="src\Searching\BinarySearch\BinarySearch.h" />
     <ClInclude Include="src\Searching\LinearSearch\LinearSearch.h" />
+    <ClInclude Include="src\Sorting\Bubble_Sort\BubbleSort.h" />
     <ClInclude Include="src\Sorting\Insertion_Sort\InsertionSort.h" />
     <ClInclude Include="src\Sorting\Insertion_Sort\RInsertionSort.h" />
     <ClInclude Include="src\Sorting\Merge_Sort\Merge_Sort.h" />

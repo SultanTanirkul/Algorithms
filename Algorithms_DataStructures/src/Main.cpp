@@ -4,6 +4,7 @@
 #include "sorting/merge_sort/merge_sort.h"
 #include "sorting/merge_sort/merge_sort_no_sentinels.h"
 #include "sorting/insertion_sort/insertionsort.h"
+#include "Sorting/Bubble_Sort/BubbleSort.h"
 #include "sorting/Insertion_Sort/RInsertionSort.h"
 #include "Searching/BinarySearch/BinarySearch.h"
 #include "Searching/LinearSearch/LinearSearch.h"
@@ -16,6 +17,7 @@
 int main()
 {
 	const unsigned int len = 100;
+	const unsigned int len_t = 2;
 	// Unsorted Array to be sorted
 	int A[len] = { 
 		           66, 90, 99, 97, 46, 14, 73, 93, 13, 5,
@@ -43,11 +45,15 @@ int main()
 				   91, 92, 93, 94, 95, 96, 97, 98, 99, 100 
 	             };
 
+	int C[len_t] = { 2,1 };
 	int testA[16]{ 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16 };
 
-	bool exists = c_Algorithms_DS::sumExists(A, len, 51);
+	c_Algorithms_DS::BubbleSort(C, len_t);
 
-	std::cout << exists << std::endl;
+	for (int i = 0; i < len_t; i++)
+	{
+		std::cout << C[i] << std::endl;
+	}
 
 	return 0;
 }
