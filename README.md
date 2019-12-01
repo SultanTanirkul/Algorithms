@@ -9,5 +9,6 @@ This repository was created in order to learn, as well as implement some of the 
 * Insertion Sort Recursive && Iterative
 * Binary Search Iterative
 * Linear Search Iterative
+* Bubble Sort Iterative
 
 ## Currently Implemented Data Stuctures
