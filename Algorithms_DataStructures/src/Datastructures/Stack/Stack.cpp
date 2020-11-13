@@ -1,9 +1,14 @@
 #include "Stack.h"
 #include <iostream>
 
-c_Algorithms_DS::Stack::Stack(int length) : length{}
+c_Algorithms_DS::Stack::Stack(int length) : length{length}
 {
     stack = new int[length];
+}
+
+c_Algorithms_DS::Stack::~Stack()
+{
+    delete[] stack;
 }
 
 bool c_Algorithms_DS::Stack::stackEmpty()
@@ -34,12 +39,4 @@ int c_Algorithms_DS::Stack::pop()
     }
 
     return stack[top--];
-}
-
-int main()
-{
-    c_Algorithms_DS::Stack stack(0);
-    stack.push(3);
-    std::cout <<  stack.stackEmpty() << " " << stack.pop() << std::endl;
-    return 0;
 }

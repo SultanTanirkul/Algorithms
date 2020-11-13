@@ -4,6 +4,7 @@ namespace c_Algorithms_DS
     {
         public:
             Stack(int length);
+            ~Stack();
             bool stackEmpty();
             bool push(int num);
             int pop();
